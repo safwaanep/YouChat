@@ -2,12 +2,10 @@
   <head>
     <title>YOUCHAT - Échangez en ligne</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
 	<meta charset="utf-8">
   </head>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  
   <body bgcolor=white>
 
   	<header>
@@ -17,14 +15,30 @@
 	
 	<menu>	
 		<nav class="nav nav-pills flex-column flex-sm-row">
-  			<a class="flex-sm-fill text-sm-center nav-link" href="#">Inscription</a>
-  			<a class="flex-sm-fill text-sm-center nav-link" href="#">Connexion</a>
+  			<a class="flex-sm-fill text-sm-center nav-link" href="inscription.html">Inscription</a>
+  			<a class="flex-sm-fill text-sm-center nav-link" href="connexion.html">Connexion</a>
   			<a class="flex-sm-fill text-sm-center nav-link" href="#">Salons</a>
 				<a class="flex-sm-fill text-sm-center nav-link" href="#">Qui sommes-nous ?</a>
 		</nav>
 	</menu>
 
-	    
+	<form action="/action_page.php">
+		<div class="form-group">
+			<label for="email">Adresse mail:</label>
+			<input type="email" class="form-control" id="email">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Mot de passe:</label>
+			<input type="password" class="form-control" id="pwd">
+		</div>
+		<div class="form-group form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox"> Se souvenir de moi
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Envoyer</button>
+	</form>		
+	
 
 <footer>
 
