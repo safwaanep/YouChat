@@ -1,0 +1,36 @@
+footer {
+	text-align:center;
+	margin-top:400px;
+	
+}
+
+header {
+	text-align:center;
+	margin-top:50px;
+	
+}
+
+menu {
+	margin-left: 35%;
+	
+}
+
+body {
+	color:black;
+	background-color:white;
+	background-image:url(images/pc2.jfif);
+	background-repeat:no-repeat;
+	background-position:100%;
+	margin:0;
+}
+
+
+fond {
+	margin-left: 0%;
+	margin-top: 250%;
+}
+
+vujs {
+	text-align:center;
+	
+}
