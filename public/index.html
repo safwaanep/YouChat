@@ -6,15 +6,74 @@
 	<meta charset="utf-8">
   </head>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   
   <body bgcolor=white>
 
   	<header>
     	<img src="images/YOUCHATT.png">
     </header>
-       
 	
+
+	<nav>
+		<a href="#"
+		@click='currentPage = 'inscription'">
+		Accéder à la page d'inscription
+	</a>
+	</nav>
+
+<section v-if='currentPage == 'connexion' "id=connexion">
+	<h1> Connectez-vous ici </h1>
+	<article> Voici un article</article>
+</section>
+
+<section v-else-if='currentPage == 'inscription' "id=inscription">
+<h1> Page d'inscription</h1>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	const app = new Vue({
+		el: '#app',
+		data: {
+			currentPage: 'inscription'
+		}
+	})
+</script>
+
+<script type="text/javascript">
+	const listOfPages = ['inscription','connexion','salons','quisommesnous']
+
+		function changePage (pageToChange) {
+			const elem = document
+			.querySelector(`#${pageToChange}`)
+
+			if (!elem) {
+				console.error("La page n'existe pas")
+				return
+			}
+
+		elem.style.display = 'block'
+
+		const pagesToHide = listOfPages
+		.filter(p => p !== pageToChange)
+
+		console.log(pagesToHide)
+		pagesToHide.forEach(p => {
+			const toHide = document
+			.querySelector(`#${p}`)
+			if (toHide) {
+				toHide.style.display = 'none'
+			}
+		})
+}
+		changePage('Inscription')
+		</script>
+
+
+
+
+
+<!--
 	<menu>	
 		<nav class="nav nav-pills flex-column flex-sm-row">
   			<a class="flex-sm-fill text-sm-center nav-link" href="inscription.html">Inscription</a>
@@ -23,7 +82,7 @@
 				<a class="flex-sm-fill text-sm-center nav-link" href="#">Qui sommes-nous ?</a>
 		</nav>
 	</menu>
-
+-->
 	    
 
 <footer>
